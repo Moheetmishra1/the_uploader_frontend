@@ -27,7 +27,7 @@ function ProjectsFileListShowList() {
 
               }
             })
-            console.log(data);
+            console.log(a," and filename",fileName);
             
             if(!data.error){
               let arr= singleProjectFileList.filter((a,i)=>{
