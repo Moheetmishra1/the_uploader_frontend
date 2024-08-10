@@ -36,7 +36,7 @@ function Navbar({title}) {
 
 <div className="projects-en">EN</div>
 
-<img  className="projectsection-logo-flag" src="../../public/Images/download.png" alt="" />
+<img  className="projectsection-logo-flag" src="https://thumb.ac-illust.com/07/07df041dfe5639cf73ccb7ba8237bb92_t.jpeg" alt="" />
 
   <div className="projects-notification">
   <svg width="44" height="52" viewBox="0 0 44 52" fill="none" xmlns="http://www.w3.org/2000/svg">
