@@ -18,7 +18,6 @@ function ProjectsFileListShowList() {
 
         try{
           let {fileName,projectFileName}=a
-          // console.log(a);
           
           
             let {data} = await axios.post(`https://the-uploader.onrender.com/api/v1/deletefileofafile/${pDetails._id}`,{fileName,projectFileName, index},{
@@ -27,13 +26,11 @@ function ProjectsFileListShowList() {
 
               }
             })
-            console.log(a," and filename",fileName);
             
             if(!data.error){
               let arr= singleProjectFileList.filter((a,i)=>{
                 return a.fileName !== fileName
               })
-              arr.splice(index,1)
               dispatch(uploadFileofFileList(arr))
               
             }else{
@@ -48,7 +45,7 @@ function ProjectsFileListShowList() {
           
         }
     }
-
+    
 
   return (
     <div className='projectsFileList'>
@@ -63,7 +60,7 @@ function ProjectsFileListShowList() {
         <div className='proejctsFileShowList-show'>
         {singleProjectFileList.map((a,index)=>{
           return <>
-          <div className='list-Flex projectsListMain' key={index}>
+          <div className='list-Flex projectsListMain' key={a._id}>
           <p className='projectsFilelist-file-item'>{a.fileName}</p>
             <p   className='projectsFilelist-file-item' style={{fontSize:"1.2em"}}  >{a.date}</p>
             <p className='projectsFilelist-file-item' >Done</p>
